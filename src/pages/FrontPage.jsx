@@ -12,7 +12,7 @@ const FrontPage = () => {
 
   return (
     <>
-      <h1>This is frontpage</h1>
+      <h2>All articles</h2>
       {error && <div>{error}</div>}
       {isLoading && <div>Loading....</div>}
       {articles && <ArticleList articles={articles} />}
