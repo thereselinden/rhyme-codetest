@@ -1,13 +1,96 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  min-height: 100vh;
+}
+
+h2 {
+  margin: 2rem 0;
+}
+
+/* NAV */
+nav {
+  height: 7vh;
+  background: lightgray;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  gap: 0.5rem;
+}
+
+ul > li {
+  list-style: none;
+}
+
+ul > li > a {
+  text-decoration: none;
+  color: cadetblue;
+  text-transform: uppercase;
+}
+
+/* Article List */
+.article-preview {
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.article-preview-card {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.article-preview-card > a {
+  text-decoration: none;
+}
+
+.article-preview-card:hover {
+  scale: 1.1;
+}
+
+/* FORM */
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+label {
+  margin: 0.5rem 0;
+}
+
+form button {
+  all: unset;
+  background: cadetblue;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Single Article */
+.single-article {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 2rem 2rem 0;
+  padding: 1rem;
+}
+
+.single-article .button-container {
+  margin-top: 1rem;
+}
+
+.single-article .button-container button:last-child {
+  margin-left: 5px;
 }
