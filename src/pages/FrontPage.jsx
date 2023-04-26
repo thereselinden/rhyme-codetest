@@ -9,7 +9,7 @@ const FrontPage = () => {
   } = useFetch(
     'http://ec2-3-249-202-253.eu-west-1.compute.amazonaws.com/articles'
   );
-  console.log('articleData', articles);
+
   return (
     <>
       <h1>This is frontpage</h1>
