@@ -4,8 +4,12 @@ const NavBar = () => {
   return (
     <nav>
       <ul>
-        <Link to="/">Home</Link>
-        <Link to="/create">Create</Link>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/create">Create</Link>
+        </li>
       </ul>
     </nav>
   );
