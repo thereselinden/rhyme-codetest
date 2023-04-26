@@ -1,3 +1,4 @@
+import ArticleList from '../components/ArticleList';
 import useFetch from '../hooks/useFetch';
 
 const FrontPage = () => {
@@ -14,13 +15,7 @@ const FrontPage = () => {
       <h1>This is frontpage</h1>
       {error && <div>{error}</div>}
       {isLoading && <div>Loading....</div>}
-      {articles &&
-        articles.map(article => (
-          <>
-            <h2>{article.title}</h2> <p>Author: {article.author}</p>{' '}
-            <p>Description: {article.description}</p>
-          </>
-        ))}
+      {articles && <ArticleList articles={articles} />}
     </>
   );
 };
