@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import '../index.css';
+
 const CreateArticle = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -23,7 +25,6 @@ const CreateArticle = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(article),
     }).then(() => {
-      console.log('new article added');
       navigate('/');
     });
   };
