@@ -1,15 +1,23 @@
-const SingleArticle = ({ article }) => {
-  return (
-    <article>
-      <h2>{article.title}</h2>
-      <p>{article.author}</p>
-      <p>{article.description}</p>
+import EditArticleForm from './EditArticleForm';
 
-      <div className="button-container">
-        <button>Edit</button>
-        <button>Delete</button>
-      </div>
-    </article>
+const SingleArticle = ({ article, onDeleteClick, onEditClick, edit }) => {
+  return (
+    <>
+      {edit ? (
+        <EditArticleForm article={article} />
+      ) : (
+        <article className="single-article">
+          <h3>{article.title}</h3>
+          <p>{article.author}</p>
+          <p>{article.description}</p>
+
+          <div className="button-container">
+            <button onClick={onEditClick}>Edit</button>
+            <button onClick={onDeleteClick}>Delete</button>
+          </div>
+        </article>
+      )}
+    </>
   );
 };
 
